@@ -19,5 +19,5 @@ jobs:
         uses: mondoohq/actions/terraform-hcl@main
         with:
           service-account-credentials: ${{ secrets.MONDOO_CONFIG_BASE64 }}
-          path: ${{ github.workspace }}
+          path: ${{ github.workspace }}/*.tf
       - run: echo "🍏 This job's status is ${{ job.status }}."
