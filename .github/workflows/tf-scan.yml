@@ -16,4 +16,4 @@ jobs:
         env:
           MONDOO_CONFIG_BASE64: ${{ secrets.MONDOO_CONFIG_BASE64 }}
         with:
-          path: "*.tf"
+          path: tfc-demo
