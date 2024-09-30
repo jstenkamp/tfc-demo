@@ -19,5 +19,6 @@ jobs:
         uses: mondoohq/actions/terraform-hcl@main
         with:
           service-account-credentials: ${{ secrets.MONDOO_CONFIG_BASE64 }}
-          path: "/home/runner/work/tfc-demo/tfc-demo/*.tf"
+          log-level: debug
+          path: /home/runner/work/tfc-demo/tfc-demo/*.tf
       - run: echo "🍏 This job's status is ${{ job.status }}."
