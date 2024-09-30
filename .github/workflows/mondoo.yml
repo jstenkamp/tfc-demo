@@ -1,0 +1,21 @@
+# Example GitHub Action to scan a Terraform config
+# See https://github.com/mondoohq/actions/tree/main/terraform-hcl for additional usage information.
+
+name: mondoo-cnspec-scan
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Scan with cnspec
+        uses: mondoohq/actions/terraform-hcl@main
+        with:
+          service-account-credentials: ${{ secrets.MONDOO_CONFIG_BASE64 }}
+          path: "*.tf"
