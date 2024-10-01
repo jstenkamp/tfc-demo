@@ -15,4 +15,4 @@ jobs:
       - name: clone repo
         run: git clone https://github.com/joestack/tfc-api-bootstrap-script
       - name: pwd
-        run: pwd
+        run: pwd && ls -la 
