@@ -19,4 +19,4 @@ jobs:
       - name: cp tfcli to PATH
         run: cp tfc-api-bootstrap-script/tfcli.sh /usr/local/bin
       - name: test tfcli
-        run: tfcli.sh -v
+        run: tfcli.sh -V
