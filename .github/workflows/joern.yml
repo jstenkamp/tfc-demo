@@ -1,0 +1,18 @@
+# Example GitHub Action to scan a Terraform config
+# See https://github.com/mondoohq/actions/tree/main/terraform-hcl for additional usage information.
+
+name: joern
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  tfc_init:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone repo
+        run: git clone https://github.com/joestack/tfc-api-bootstrap-script
+      - name: pwd
+        run: pwd
